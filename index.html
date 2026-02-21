@@ -2,109 +2,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Extrond Portfolio</title><style>
+<title>Extrond Portfolio</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:linear-gradient(180deg,#0a0a0a,#111);
+  font-family:'Orbitron',sans-serif;
+  background:#060606;
   color:white;
 }
 
+/* NAV */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 20px;
+  padding:16px 22px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(8px);
   position:sticky;
   top:0;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
+  z-index:10;
 }
 
-nav h1{
-  font-size:22px;
+.logo{
+  font-weight:700;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#cfff00,#00e5ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-size:20px;
 }
 
-.buttons a{
+.navbtn a{
   text-decoration:none;
   margin-left:10px;
   padding:10px 16px;
   border-radius:12px;
-  background:#222;
+  border:1px solid #00e5ff33;
   color:white;
-  transition:0.3s;
+  transition:.3s;
 }
 
-.buttons a:hover{
-  background:#444;
+.navbtn a:hover{
+  background:linear-gradient(90deg,#cfff00,#00e5ff);
+  color:black;
 }
 
+/* HERO */
 .hero{
   text-align:center;
-  padding:60px 20px;
+  padding:80px 20px 60px;
 }
 
-.hero h2{
-  font-size:42px;
-  margin-bottom:10px;
+.hero h1{
+  font-size:48px;
+  background:linear-gradient(90deg,#cfff00,#00e5ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:12px;
 }
 
 .hero p{
-  color:#bbb;
+  color:#aaa;
   max-width:600px;
   margin:auto;
 }
 
-.gallery{
-  padding:30px 15px 60px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:16px;
-  max-width:1100px;
+.heroBtns{
+  margin-top:30px;
+}
+
+.heroBtns a{
+  text-decoration:none;
+  padding:14px 22px;
+  margin:8px;
+  border-radius:14px;
+  display:inline-block;
+  border:1px solid #00e5ff55;
+  transition:.3s;
+}
+
+.heroBtns a.main{
+  background:linear-gradient(90deg,#cfff00,#00e5ff);
+  color:black;
+}
+
+.heroBtns a:hover{
+  transform:translateY(-3px);
+}
+
+/* ABOUT */
+.section{
+  padding:60px 20px;
+  max-width:1000px;
   margin:auto;
+  text-align:center;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.bar{
+  width:120px;
+  height:4px;
+  margin:10px auto 20px;
+  background:linear-gradient(90deg,#cfff00,#00e5ff);
+  border-radius:4px;
+}
+
+.section p{
+  color:#bbb;
+  line-height:1.6;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
 }
 
 .card{
-  background:#151515;
-  border-radius:16px;
-  overflow:hidden;
-  transition:0.3s;
+  background:#111;
+  padding:30px 20px;
+  border-radius:18px;
+  border:1px solid #ffffff0d;
+  transition:.3s;
 }
 
 .card:hover{
-  transform:scale(1.05);
+  transform:translateY(-6px);
+  border:1px solid #00e5ff55;
 }
 
-.card img{
+/* PORTFOLIO */
+.gallery{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.work{
+  background:#111;
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:22px;
+  border:1px solid #ffffff0d;
+}
+
+.work img{
   width:100%;
   display:block;
 }
 
+/* CONTACT */
+.contactCards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.social{
+  background:#111;
+  padding:40px 20px;
+  border-radius:18px;
+  border:1px solid #ffffff0d;
+  transition:.3s;
+}
+
+.social:hover{
+  border:1px solid #00e5ff55;
+}
+
+.social a{
+  color:#cfff00;
+  text-decoration:none;
+}
+
 footer{
   text-align:center;
-  padding:20px;
+  padding:30px;
   color:#888;
   border-top:1px solid #222;
+  margin-top:40px;
 }
 </style></head><body><nav>
-  <h1>Extrond</h1>
-  <div class="buttons">
-    <a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">Instagram</a>
-  </div>
+<div class="logo">EXTROND</div>
+<div class="navbtn">
+<a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">Instagram</a>
+</div>
 </nav><section class="hero">
-  <h2>Extrond Portfolio</h2>
-  <p>Professional Minecraft renders, cinematic skins, logos and creative character designs. Explore the latest artwork and connect through social platforms.</p>
-</section><section class="gallery">
-  <div class="card"><img src="Untitled84.png"></div>
-  <div class="card"><img src="12496-01.jpg"></div>
-  <div class="card"><img src="Untitled24_20251023210831.png"></div>
-  <div class="card"><img src="Untitled22_20251022180537.png"></div>
-  <div class="card"><img src="Untitled24_20251223202620.png"></div>
-  <div class="card"><img src="12943-01.jpg"></div>
-  <div class="card"><img src="Untitled43_1.png"></div>
-  <div class="card"><img src="Untitled84.png"></div>
+<h1>Extrond Portfolio</h1>
+<p>Professional Minecraft renders, cinematic skins and creative character designs. Built for both mobile and desktop viewers.</p>
+<div class="heroBtns">
+<a class="main" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
+<a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
+</div>
+</section><section class="section">
+<h2>About Extrond</h2>
+<div class="bar"></div>
+<p>A passionate Minecraft creator focused on cinematic renders and stylish character designs. Every project is crafted to stand out visually and feel premium across both mobile and desktop screens.</p><div class="cards">
+<div class="card">Creative Renders</div>
+<div class="card">Fast Turnaround</div>
+<div class="card">Professional Quality</div>
+</div>
+</section><section class="section">
+<h2>Portfolio</h2>
+<div class="bar"></div>
+</section><div class="gallery">
+<div class="work"><img src="Untitled84.png"></div>
+<div class="work"><img src="12496-01.jpg"></div>
+<div class="work"><img src="Untitled24_20251023210831.png"></div>
+<div class="work"><img src="Untitled22_20251022180537.png"></div>
+<div class="work"><img src="Untitled24_20251223202620.png"></div>
+<div class="work"><img src="12943-01.jpg"></div>
+<div class="work"><img src="Untitled43_1.png"></div>
+<div class="work"><img src="Untitled14_20251124102514.png"></div>
+</div><section class="section">
+<h2>Let's Connect</h2>
+<div class="bar"></div>
+<div class="contactCards">
+<div class="social">
+<h3>YouTube</h3>
+<a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit Channel →</a>
+</div>
+<div class="social">
+<h3>Instagram</h3>
+<a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Profile →</a>
+</div>
+</div>
 </section><footer>
-© 2026 Extrond — All Rights Reserved
+© 2026 Extrond — Neon Cyan Edition
 </footer></body>
 </html>
