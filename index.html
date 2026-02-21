@@ -1,93 +1,110 @@
-import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { motion } from "framer-motion";
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extrond Portfolio</title><style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:linear-gradient(180deg,#0a0a0a,#111);
+  color:white;
+}
 
-export default function ExtrondPortfolio() { const works = [ { id: 1, src: "/work1.jpg" }, { id: 2, src: "/work2.jpg" }, { id: 3, src: "/work3.jpg" }, { id: 4, src: "/work4.jpg" }, { id: 5, src: "/work5.jpg" }, { id: 6, src: "/work6.jpg" }, { id: 7, src: "/work7.jpg" }, { id: 8, src: "/work8.jpg" } ];
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+}
 
-return ( <div className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-black text-white"> {/* Navbar */} <nav className="flex items-center justify-between px-6 py-4 sticky top-0 backdrop-blur-xl bg-black/40 border-b border-white/10 z-50"> <h1 className="text-xl md:text-2xl font-bold tracking-wide"> Extrond </h1>
+nav h1{
+  font-size:22px;
+}
 
-<div className="flex gap-3">
-      <a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">
-        <Button className="rounded-2xl">YouTube</Button>
-      </a>
-      <a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">
-        <Button variant="secondary" className="rounded-2xl">
-          Instagram
-        </Button>
-      </a>
-    </div>
-  </nav>
+.buttons a{
+  text-decoration:none;
+  margin-left:10px;
+  padding:10px 16px;
+  border-radius:12px;
+  background:#222;
+  color:white;
+  transition:0.3s;
+}
 
-  {/* Hero Section */}
-  <section className="relative px-6 py-24 text-center max-w-5xl mx-auto">
-    <motion.h2
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent"
-    >
-      Extrond Portfolio
-    </motion.h2>
+.buttons a:hover{
+  background:#444;
+}
 
-    <motion.p
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-      className="text-neutral-400 text-lg max-w-2xl mx-auto"
-    >
-      Professional Minecraft renders, cinematic skins, logos and creative character designs. Explore the latest artwork and connect through social platforms.
-    </motion.p>
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.4 }}
-      className="flex justify-center gap-4 mt-10 flex-wrap"
-    >
-      <a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">
-        <Button size="lg" className="rounded-2xl px-8">
-          Visit YouTube
-        </Button>
-      </a>
-      <a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">
-        <Button size="lg" variant="secondary" className="rounded-2xl px-8">
-          View Instagram
-        </Button>
-      </a>
-    </motion.div>
-  </section>
+.hero h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
 
-  {/* Works Section */}
-  <section className="px-6 pb-24 max-w-7xl mx-auto">
-    <h3 className="text-3xl font-semibold mb-12 text-center">
-      Featured Works
-    </h3>
+.hero p{
+  color:#bbb;
+  max-width:600px;
+  margin:auto;
+}
 
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {works.map((work, i) => (
-        <motion.div
-          key={work.id}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.05 }}
-          viewport={{ once: true }}
-        >
-          <Card className="overflow-hidden rounded-2xl bg-white/5 backdrop-blur-xl border-white/10 hover:scale-105 transition-all duration-300 shadow-xl">
-            <CardContent className="p-0">
-              <img
-                src={work.src}
-                alt={`Work ${work.id}`}
-                className="w-full h-full object-cover"
-              />
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  </section>
+.gallery{
+  padding:30px 15px 60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:16px;
+  max-width:1100px;
+  margin:auto;
+}
 
-  {/* Footer */}
-  <footer className="border-t border-white/10 text-center py-8 text-neutral-500">
-    <p>© {new Date().getFullYear()} Extrond — All Rights Reserved</p>
-  </footer>
-</div>
+.card{
+  background:#151515;
+  border-radius:16px;
+  overflow:hidden;
+  transition:0.3s;
+}
 
-); }
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:100%;
+  display:block;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#888;
+  border-top:1px solid #222;
+}
+</style></head><body><nav>
+  <h1>Extrond</h1>
+  <div class="buttons">
+    <a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">Instagram</a>
+  </div>
+</nav><section class="hero">
+  <h2>Extrond Portfolio</h2>
+  <p>Professional Minecraft renders, cinematic skins, logos and creative character designs. Explore the latest artwork and connect through social platforms.</p>
+</section><section class="gallery">
+  <div class="card"><img src="work1.jpg"></div>
+  <div class="card"><img src="work2.jpg"></div>
+  <div class="card"><img src="work3.jpg"></div>
+  <div class="card"><img src="work4.jpg"></div>
+  <div class="card"><img src="work5.jpg"></div>
+  <div class="card"><img src="work6.jpg"></div>
+  <div class="card"><img src="work7.jpg"></div>
+  <div class="card"><img src="work8.jpg"></div>
+</section><footer>
+© 2026 Extrond — All Rights Reserved
+</footer></body>
+</html>
