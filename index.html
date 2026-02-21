@@ -2,191 +2,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTROND</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet"><style>
-/* ================================
-   EXTROND — CLEAN FINAL VERSION
-   (NAV BUTTON OVERLAP FIXED)
-================================ */
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
-
+<title>Extrond</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-background:#050607;
-color:#fff;
+font-family:'Orbitron',sans-serif;
+background:#020a0c;
+color:#dffcff;
 overflow-x:hidden;
 }
 
-/* SAFE GLOW BACKGROUND */
+/* AQUA ELITE BACKGROUND */
 body::before{
 content:"";
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 15% 20%,rgba(0,255,200,.12),transparent 45%),
-radial-gradient(circle at 85% 80%,rgba(150,255,0,.10),transparent 45%);
+radial-gradient(circle at 20% 20%,rgba(0,255,220,.15),transparent 40%),
+radial-gradient(circle at 80% 70%,rgba(0,200,255,.15),transparent 40%);
 z-index:-1;
+animation:floatGlow 10s linear infinite alternate;
 }
 
-/* ===== NAVBAR ===== */
+@keyframes floatGlow{
+0%{transform:translateY(0)}
+100%{transform:translateY(-40px)}
+}
+
+/* NAVBAR */
 nav{
 position:sticky;
-top:10px;
-margin:12px auto;
-width:94%;
-max-width:1100px;
+top:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 18px;
-border-radius:18px;
-background:rgba(8,10,10,.7);
-backdrop-filter:blur(12px);
-border:1px solid rgba(0,255,200,.18);
+padding:14px 20px;
+background:rgba(0,20,25,.6);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(0,255,220,.2);
+z-index:99;
 }
 
 .logo{
-font-weight:800;
-letter-spacing:2px;
-background:linear-gradient(90deg,#9cff00,#00ffe1);
+font-size:20px;
+font-weight:700;
+background:linear-gradient(90deg,#7bffb2,#00eaff);
 -webkit-background-clip:text;
-color:transparent;
+-webkit-text-fill-color:transparent;
 }
 
-.nav{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-justify-content:flex-end;
-}
-
-.nav a{
+.nav-links a{
 text-decoration:none;
-color:#aef;
+color:#bffff6;
+margin-left:14px;
 padding:8px 14px;
 border-radius:12px;
-border:1px solid rgba(0,255,200,.25);
-font-size:13px;
+border:1px solid rgba(0,255,220,.3);
+transition:.3s;
 }
 
-/* ===== HERO ===== */
+.nav-links a:hover{
+background:rgba(0,255,220,.1);
+box-shadow:0 0 15px rgba(0,255,220,.4);
+}
+
+/* HERO */
 .hero{
+padding:90px 20px 40px;
 text-align:center;
-padding:90px 20px 60px;
 }
 
 .hero h1{
-font-size:52px;
-background:linear-gradient(90deg,#9cff00,#00ffe1);
+font-size:48px;
+background:linear-gradient(90deg,#7bffb2,#00eaff);
 -webkit-background-clip:text;
-color:transparent;
-margin-bottom:16px;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#9aa;
-max-width:650px;
+max-width:600px;
 margin:auto;
-line-height:1.6;
-}
-
-.buttons{
-margin-top:28px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:14px;
+opacity:.8;
 }
 
 .btn{
+display:inline-block;
+margin:14px 6px;
 padding:14px 24px;
 border-radius:18px;
 text-decoration:none;
 font-size:14px;
+transition:.3s;
 }
 
-.primary{background:linear-gradient(90deg,#9cff00,#00ffe1);color:#000}
-.outline{border:1px solid #00ffe1;color:#00ffe1}
-
-/* ===== SECTIONS ===== */
-section{padding:70px 20px;max-width:1100px;margin:auto}
-.title{text-align:center;font-size:30px;margin-bottom:14px}
-.line{width:140px;height:3px;margin:0 auto 30px;background:linear-gradient(90deg,#9cff00,#00ffe1)}
-
-/* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.feature{background:#0a0b0c;padding:28px;border-radius:22px;text-align:center;border:1px solid rgba(255,255,255,.05)}
-
-/* PORTFOLIO */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.card{border-radius:24px;overflow:hidden;background:#0b0c0d}
-.card img{width:100%;height:360px;object-fit:cover;display:block}
-
-/* CONTACT */
-.contact{display:grid;gap:20px}
-.box{background:#0a0b0c;padding:30px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,.05)}
-.box a{color:#9cff00;text-decoration:none}
-
-footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(255,255,255,.06);margin-top:60px}
-
-/* ===== MOBILE FIX FOR NAV BUTTON MIXING ===== */
-@media(max-width:600px){
-nav{
-flex-direction:column;
-align-items:flex-start;
-gap:10px;
+.primary{
+background:linear-gradient(90deg,#7bffb2,#00eaff);
+color:#001;
 }
 
-.nav{
+.secondary{
+border:1px solid #00eaff;
+color:#9efaff;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(0,255,220,.5);
+}
+
+/* GRID */
+.section{
+padding:50px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+margin-top:25px;
+}
+
+.card{
+background:rgba(0,30,35,.6);
+border-radius:22px;
+overflow:hidden;
+border:1px solid rgba(0,255,220,.15);
+backdrop-filter:blur(14px);
+transition:.4s;
+position:relative;
+}
+
+.card img{
 width:100%;
-justify-content:flex-start;
+display:block;
 }
 
-.hero h1{font-size:34px}
-.card img{height:260px}
+.card:hover{
+transform:translateY(-6px) scale(1.02);
+box-shadow:0 0 25px rgba(0,255,220,.35);
 }
-</style></head>
-<body><nav>
+
+/* FULLSCREEN VIEWER */
+.viewer{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:200;
+}
+
+.viewer img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.viewer.active{display:flex}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px 10px;
+opacity:.6;
+font-size:13px;
+}
+
+@media(max-width:700px){
+.hero h1{font-size:34px}
+nav{flex-direction:column;gap:10px}
+}
+</style></head><body><nav>
 <div class="logo">EXTROND</div>
-<div class="nav">
-<a href="#about">About</a>
-<a href="#portfolio">Portfolio</a>
+<div class="nav-links">
+<a href="#logo">Logo</a>
+<a href="#thumb">Thumbnail</a>
 <a href="#contact">Contact</a>
 </div>
-</nav><div class="hero">
+</nav><section class="hero">
 <h1>EXTROND</h1>
-<p>Professional Minecraft renders, cinematic skins and creative character designs. Built for both mobile and desktop viewers.</p>
-<div class="buttons">
-<a class="btn primary" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
-<a class="btn outline" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
+<p>Aqua Elite cinematic portfolio — ultra clean creator showcase with neon glass aesthetic.</p>
+<a class="btn primary" href="#thumb">View Thumbnails</a>
+<a class="btn secondary" href="#contact">Contact</a>
+</section><section id="logo" class="section">
+<h2>Logo</h2>
+<div class="grid">
+<img src="12943-01.jpg">
+<img src="12496-01.jpg">
 </div>
-</div><section id="about">
-<div class="title">About Extrond</div>
-<div class="line"></div>
-<div class="features">
-<div class="feature">Creative Renders</div>
-<div class="feature">Fast Delivery</div>
-<div class="feature">Professional Quality</div>
+</section><section id="thumb" class="section">
+<h2>Thumbnail</h2>
+<div class="grid">
+<div class="card"><img src="Untitled54_20260121112937.png"></div>
+<div class="card"><img src="Untitled50_20260119143236.png"></div>
+<div class="card"><img src="Untitled29_20260105184524.jpg"></div>
+<div class="card"><img src="Untitled47_20260220185923.png"></div>
+<div class="card"><img src="Untitled23_20260103225034.jpg"></div>
+<div class="card"><img src="Untitled17.jpg"></div>
+<div class="card"><img src="Untitled17_20251019195936.jpg"></div>
+<div class="card"><img src="13447-01.jpg"></div>
+<div class="card"><img src="13495-01.jpg"></div>
+<div class="card"><img src="IMG_20251116_173026.png"></div>
 </div>
-</section><section id="portfolio">
-<div class="title">Portfolio</div>
-<div class="line"></div>
-<div class="gallery">
-<div class="card"><img src="12496-01.jpg"></div>
-<div class="card"><img src="12943-01.jpg"></div>
-<div class="card"><img src="Untitled14_20251124102514.png"></div>
-<div class="card"><img src="Untitled22_20251022180537.png"></div>
-<div class="card"><img src="Untitled24_20251023210831.png"></div>
-<div class="card"><img src="Untitled24_20251223202620.png"></div>
-<div class="card"><img src="Untitled43_1.png"></div>
-<div class="card"><img src="Untitled84.png"></div>
-</div>
-</section><section id="contact">
-<div class="title">Let's Connect</div>
-<div class="line"></div>
-<div class="contact">
-<div class="box">YouTube<br><a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit Channel →</a></div>
-<div class="box">Instagram<br><a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Profile →</a></div>
-</div>
-</section><footer>© 2026 EXTROND</footer></body>
+</section><section id="contact" class="section">
+<h2>Contact</h2>
+<p style="opacity:.7">Add your social links here.</p>
+</section><footer>
+© 2026 Extrond — Aqua Elite Mode
+</footer><div class="viewer" id="viewer"><img id="viewerImg"></div><script>
+const viewer=document.getElementById('viewer');
+const viewerImg=document.getElementById('viewerImg');
+
+document.querySelectorAll('.card img').forEach(img=>{
+img.onclick=()=>{
+viewer.classList.add('active');
+viewerImg.src=img.src;
+}
+});
+
+viewer.onclick=()=>viewer.classList.remove('active');
+</script></body>
 </html>
