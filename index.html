@@ -2,12 +2,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTROND — ASCENDED LEVEL</title>
+<title>EXTROND</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet"><style>
-/* =====================================
-   ASCENDED LEVEL — FINAL STABLE BUILD
-   (BLACK SCREEN BUG FULLY FIXED)
-===================================== */
+/* ================================
+   EXTROND — CLEAN FINAL VERSION
+   (NAV BUTTON OVERLAP FIXED)
+================================ */
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
 
@@ -17,7 +17,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* ===== SAFE BACKGROUND GLOW ===== */
+/* SAFE GLOW BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -32,13 +32,13 @@ z-index:-1;
 nav{
 position:sticky;
 top:10px;
-margin:10px auto;
+margin:12px auto;
 width:94%;
 max-width:1100px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 20px;
+padding:14px 18px;
 border-radius:18px;
 background:rgba(8,10,10,.7);
 backdrop-filter:blur(12px);
@@ -53,13 +53,20 @@ background:linear-gradient(90deg,#9cff00,#00ffe1);
 color:transparent;
 }
 
+.nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:flex-end;
+}
+
 .nav a{
-margin-left:12px;
 text-decoration:none;
 color:#aef;
 padding:8px 14px;
 border-radius:12px;
 border:1px solid rgba(0,255,200,.25);
+font-size:13px;
 }
 
 /* ===== HERO ===== */
@@ -106,24 +113,36 @@ section{padding:70px 20px;max-width:1100px;margin:auto}
 .title{text-align:center;font-size:30px;margin-bottom:14px}
 .line{width:140px;height:3px;margin:0 auto 30px;background:linear-gradient(90deg,#9cff00,#00ffe1)}
 
-/* ===== FEATURES ===== */
+/* FEATURES */
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .feature{background:#0a0b0c;padding:28px;border-radius:22px;text-align:center;border:1px solid rgba(255,255,255,.05)}
 
-/* ===== PORTFOLIO ===== */
+/* PORTFOLIO */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
 .card{border-radius:24px;overflow:hidden;background:#0b0c0d}
 .card img{width:100%;height:360px;object-fit:cover;display:block}
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact{display:grid;gap:20px}
 .box{background:#0a0b0c;padding:30px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,.05)}
 .box a{color:#9cff00;text-decoration:none}
 
 footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(255,255,255,.06);margin-top:60px}
 
-@media(max-width:700px){
-.hero h1{font-size:36px}
+/* ===== MOBILE FIX FOR NAV BUTTON MIXING ===== */
+@media(max-width:600px){
+nav{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.nav{
+width:100%;
+justify-content:flex-start;
+}
+
+.hero h1{font-size:34px}
 .card img{height:260px}
 }
 </style></head>
@@ -135,8 +154,8 @@ footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(
 <a href="#contact">Contact</a>
 </div>
 </nav><div class="hero">
-<h1>EXTROND — ASCENDED LEVEL</h1>
-<p>Ultra clean cinematic creator portfolio with stable neon glow and fully optimized mobile + desktop experience.</p>
+<h1>EXTROND</h1>
+<p>Professional Minecraft renders, cinematic skins and creative character designs. Built for both mobile and desktop viewers.</p>
 <div class="buttons">
 <a class="btn primary" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
 <a class="btn outline" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
@@ -147,7 +166,7 @@ footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(
 <div class="features">
 <div class="feature">Creative Renders</div>
 <div class="feature">Fast Delivery</div>
-<div class="feature">Ascended Quality</div>
+<div class="feature">Professional Quality</div>
 </div>
 </section><section id="portfolio">
 <div class="title">Portfolio</div>
@@ -169,5 +188,5 @@ footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(
 <div class="box">YouTube<br><a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit Channel →</a></div>
 <div class="box">Instagram<br><a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Profile →</a></div>
 </div>
-</section><footer>© 2026 EXTROND — ASCENDED LEVEL</footer></body>
+</section><footer>© 2026 EXTROND</footer></body>
 </html>
