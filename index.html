@@ -2,10 +2,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTROND — PARAGON LEVEL</title>
+<title>EXTROND — ASCENDED LEVEL</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet"><style>
 /* =====================================
-   PARAGON LEVEL — FINAL CREATOR DESIGN
+   ASCENDED LEVEL — FINAL STABLE BUILD
+   (BLACK SCREEN BUG FULLY FIXED)
 ===================================== */
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
@@ -16,87 +17,157 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* ===== PARAGON GLOW BACKGROUND ===== */
+/* ===== SAFE BACKGROUND GLOW ===== */
 body::before{
 content:"";
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 15% 25%,rgba(0,255,200,.12),transparent 40%),
-radial-gradient(circle at 85% 75%,rgba(150,255,0,.10),transparent 40%);
+radial-gradient(circle at 15% 20%,rgba(0,255,200,.12),transparent 45%),
+radial-gradient(circle at 85% 80%,rgba(150,255,0,.10),transparent 45%);
 z-index:-1;
 }
 
-/* ===== FLOATING NAVBAR ===== */
+/* ===== NAVBAR ===== */
 nav{
 position:sticky;
-top:12px;
-margin:0 auto;
-width:95%;
+top:10px;
+margin:10px auto;
+width:94%;
 max-width:1100px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:14px 20px;
 border-radius:18px;
-background:rgba(8,10,10,.65);
-backdrop-filter:blur(14px);
+background:rgba(8,10,10,.7);
+backdrop-filter:blur(12px);
 border:1px solid rgba(0,255,200,.18);
-z-index:99;
-transition:.35s;
 }
 
-nav.scrolled{
-transform:<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTROND — PARAGON LEVEL</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
-
-<style>
-/* =====================================
-   PARAGON LEVEL — FINAL CREATOR DESIGN
-===================================== */
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
-
-body{
-background:#050607;
-color:#fff;
-overflow-x:hidden;
+.logo{
+font-weight:800;
+letter-spacing:2px;
+background:linear-gradient(90deg,#9cff00,#00ffe1);
+-webkit-background-clip:text;
+color:transparent;
 }
 
-/* ===== PARAGON GLOW BACKGROUND ===== */
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 15% 25%,rgba(0,255,200,.12),transparent 40%),
-radial-gradient(circle at 85% 75%,rgba(150,255,0,.10),transparent 40%);
-z-index:-1;
+.nav a{
+margin-left:12px;
+text-decoration:none;
+color:#aef;
+padding:8px 14px;
+border-radius:12px;
+border:1px solid rgba(0,255,200,.25);
 }
 
-/* ===== FLOATING NAVBAR ===== */
-nav{
-position:sticky;
-top:12px;
-margin:0 auto;
-width:95%;
-max-width:1100px;
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+padding:90px 20px 60px;
+}
+
+.hero h1{
+font-size:52px;
+background:linear-gradient(90deg,#9cff00,#00ffe1);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:16px;
+}
+
+.hero p{
+color:#9aa;
+max-width:650px;
+margin:auto;
+line-height:1.6;
+}
+
+.buttons{
+margin-top:28px;
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:14px 20px;
-border-radius:18px;
-background:rgba(8,10,10,.65);
-backdrop-filter:blur(14px);
-border:1px solid rgba(0,255,200,.18);
-z-index:99;
-transition:.35s;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
 }
 
-nav.scrolled{
-transform:
+.btn{
+padding:14px 24px;
+border-radius:18px;
+text-decoration:none;
+font-size:14px;
+}
+
+.primary{background:linear-gradient(90deg,#9cff00,#00ffe1);color:#000}
+.outline{border:1px solid #00ffe1;color:#00ffe1}
+
+/* ===== SECTIONS ===== */
+section{padding:70px 20px;max-width:1100px;margin:auto}
+.title{text-align:center;font-size:30px;margin-bottom:14px}
+.line{width:140px;height:3px;margin:0 auto 30px;background:linear-gradient(90deg,#9cff00,#00ffe1)}
+
+/* ===== FEATURES ===== */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feature{background:#0a0b0c;padding:28px;border-radius:22px;text-align:center;border:1px solid rgba(255,255,255,.05)}
+
+/* ===== PORTFOLIO ===== */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{border-radius:24px;overflow:hidden;background:#0b0c0d}
+.card img{width:100%;height:360px;object-fit:cover;display:block}
+
+/* ===== CONTACT ===== */
+.contact{display:grid;gap:20px}
+.box{background:#0a0b0c;padding:30px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,.05)}
+.box a{color:#9cff00;text-decoration:none}
+
+footer{text-align:center;padding:50px 10px;color:#777;border-top:1px solid rgba(255,255,255,.06);margin-top:60px}
+
+@media(max-width:700px){
+.hero h1{font-size:36px}
+.card img{height:260px}
+}
+</style></head>
+<body><nav>
+<div class="logo">EXTROND</div>
+<div class="nav">
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+</nav><div class="hero">
+<h1>EXTROND — ASCENDED LEVEL</h1>
+<p>Ultra clean cinematic creator portfolio with stable neon glow and fully optimized mobile + desktop experience.</p>
+<div class="buttons">
+<a class="btn primary" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
+<a class="btn outline" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
+</div>
+</div><section id="about">
+<div class="title">About Extrond</div>
+<div class="line"></div>
+<div class="features">
+<div class="feature">Creative Renders</div>
+<div class="feature">Fast Delivery</div>
+<div class="feature">Ascended Quality</div>
+</div>
+</section><section id="portfolio">
+<div class="title">Portfolio</div>
+<div class="line"></div>
+<div class="gallery">
+<div class="card"><img src="12496-01.jpg"></div>
+<div class="card"><img src="12943-01.jpg"></div>
+<div class="card"><img src="Untitled14_20251124102514.png"></div>
+<div class="card"><img src="Untitled22_20251022180537.png"></div>
+<div class="card"><img src="Untitled24_20251023210831.png"></div>
+<div class="card"><img src="Untitled24_20251223202620.png"></div>
+<div class="card"><img src="Untitled43_1.png"></div>
+<div class="card"><img src="Untitled84.png"></div>
+</div>
+</section><section id="contact">
+<div class="title">Let's Connect</div>
+<div class="line"></div>
+<div class="contact">
+<div class="box">YouTube<br><a href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit Channel →</a></div>
+<div class="box">Instagram<br><a href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Profile →</a></div>
+</div>
+</section><footer>© 2026 EXTROND — ASCENDED LEVEL</footer></body>
+</html>
