@@ -2,194 +2,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXTROND — Aqua Mythic Core</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet"><style>
+<title>Extrond — Aqua Mythic Portfolio</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet"><style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
 
 body{
-background:linear-gradient(135deg,#021a1c,#063c3c,#031d1e);
-color:#cffffa;
-overflow-x:hidden;
+ background:linear-gradient(180deg,#021b1a,#063a37);
+ color:#cffffa;
 }
 
-/* ===== NAVBAR ===== */
-nav{
-position:sticky;
-top:0;
-backdrop-filter:blur(14px);
-background:rgba(0,25,25,.6);
-border-bottom:1px solid rgba(0,255,220,.15);
-z-index:1000;
+header{
+ position:sticky;
+ top:0;
+ z-index:999;
+ backdrop-filter:blur(18px);
+ background:rgba(3,40,38,.6);
+ border-bottom:1px solid rgba(120,255,240,.15);
 }
 
-.nav-inner{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 20px;
+.nav{
+ max-width:1100px;
+ margin:auto;
+ padding:14px 18px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
 }
 
-.logo-title{
-font-size:22px;
-letter-spacing:4px;
-color:#8ffff3;
+.logoText{
+ font-size:18px;
+ letter-spacing:4px;
+ color:#8ff6ea;
 }
 
-.menu{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
+.navBtns{
+ display:flex;
+ gap:10px;
+ flex-wrap:wrap;
 }
 
-.menu a{
-text-decoration:none;
-padding:10px 18px;
-border-radius:40px;
-border:1px solid rgba(0,255,220,.3);
-color:#a7fff5;
-font-size:13px;
-transition:.3s;
+.navBtns a{
+ text-decoration:none;
+ color:#9ffaf1;
+ border:1px solid rgba(140,255,240,.25);
+ padding:8px 14px;
+ border-radius:20px;
+ font-size:12px;
 }
 
-.menu a:hover{
-background:rgba(0,255,220,.12);
-box-shadow:0 0 15px rgba(0,255,220,.3);
+section{
+ max-width:1100px;
+ margin:auto;
+ padding:70px 18px;
 }
 
-/* ===== HERO ===== */
 .hero{
-max-width:900px;
-margin:90px auto 60px;
-text-align:center;
-padding:0 20px;
+ text-align:center;
+ padding-top:90px;
+ padding-bottom:70px;
 }
 
 .hero h1{
-font-size:46px;
-color:#9bfff4;
-margin-bottom:20px;
+ font-size:42px;
+ margin-bottom:20px;
+ color:#a9fff7;
 }
 
 .hero p{
-line-height:1.7;
-opacity:.85;
+ max-width:700px;
+ margin:auto;
+ opacity:.8;
+ line-height:1.6;
 }
 
-.hero-btns{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+.heroBtns{
+ margin-top:28px;
+ display:flex;
+ justify-content:center;
+ gap:14px;
+ flex-wrap:wrap;
 }
 
-.btn{
-padding:14px 28px;
-border-radius:40px;
-border:1px solid rgba(0,255,220,.4);
-text-decoration:none;
-color:#bffff8;
+.btnMain{
+ background:linear-gradient(90deg,#6effe8,#3db6ff);
+ padding:12px 24px;
+ border-radius:30px;
+ color:#042222;
+ text-decoration:none;
+ font-size:14px;
 }
 
-.btn.primary{
-background:linear-gradient(90deg,#7fffd4,#36b8ff);
-color:#002;
-border:none;
+.btnOutline{
+ border:1px solid rgba(140,255,240,.35);
+ padding:12px 24px;
+ border-radius:30px;
+ color:#9ffaf1;
+ text-decoration:none;
+ font-size:14px;
 }
 
-/* ===== SECTIONS ===== */
-section{
-max-width:1200px;
-margin:70px auto;
-padding:0 20px;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:30px;
-color:#aafff6;
+h2{
+ margin-bottom:28px;
+ color:#9ffaf1;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:26px;
 }
 
 .card{
-background:rgba(0,40,40,.45);
-border:1px solid rgba(0,255,220,.2);
-border-radius:20px;
-padding:14px;
+ background:rgba(0,0,0,.18);
+ border:1px solid rgba(130,255,240,.18);
+ padding:18px;
+ border-radius:18px;
 }
 
 .card img{
-width:100%;
-display:block;
-border-radius:14px;
+ width:100%;
+ border-radius:14px;
+ display:block;
 }
 
-/* ===== CONTACT ===== */
 .contact{
-text-align:center;
-margin-top:80px;
+ text-align:center;
+ padding-top:80px;
 }
 
-.footer{
-margin-top:60px;
-text-align:center;
-opacity:.6;
-padding-bottom:50px;
-font-size:13px;
+footer{
+ text-align:center;
+ opacity:.6;
+ font-size:12px;
+ padding:50px 20px;
 }
 
 @media(max-width:700px){
-.hero h1{font-size:34px}
-.nav-inner{flex-direction:column;gap:12px}
+ .hero h1{font-size:30px}
+ section{padding:60px 16px}
 }
-
-</style></head>
-<body><nav>
-<div class="nav-inner">
-<div class="logo-title">EXTROND</div>
-<div class="menu">
+</style></head><body><header>
+<div class="nav">
+<div class="logoText">EXTROND</div>
+<div class="navBtns">
 <a href="#logo">Logo</a>
 <a href="#thumb">Thumbnail</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
-</nav><div class="hero">
+</header><section class="hero">
 <h1>EXTROND</h1>
-<p>Professional Minecraft renders, thumbnails and creator visuals. Clean aqua cinematic portfolio designed with balanced spacing for both mobile and desktop experience.</p><div class="hero-btns">
-<a class="btn primary" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
-<a class="btn" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
+<p>Professional Minecraft renders, thumbnails and creator visuals. Clean aqua cinematic portfolio designed with balanced spacing for both mobile and desktop experience.</p>
+<div class="heroBtns">
+<a class="btnMain" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">Visit YouTube</a>
+<a class="btnOutline" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">View Instagram</a>
 </div>
-</div><!-- ================= LOGO SECTION (ONLY LOGOS HERE) ================= --><section id="logo">
-<div class="section-title">Logo</div>
-<div class="grid"><div class="card"><img src="12943-01.jpg"></div>
-<div class="card"><img src="Untitled84.png"></div>
-<div class="card"><img src="Untitled24_20251023210831.png"></div>
-<div class="card"><img src="Untitled24_20251223202620.png"></div>
-<div class="card"><img src="Untitled22_20251022180537.png"></div>
-<div class="card"><img src="Untitled43_1.png"></div>
-<div class="card"><img src="12496-01.jpg"></div></div>
-</section><!-- ================= THUMBNAIL SECTION (ONLY THUMBNAILS HERE) ================= --><section id="thumb">
-<div class="section-title">Thumbnail</div>
-<div class="grid"><div class="card"><img src="Untitled47_20260220185923.png"></div>
-<div class="card"><img src="Untitled84.png"></div>
-<div class="card"><img src="12496-01.jpg"></div>
-<div class="card"><img src="Untitled43_1.png"></div>
-<div class="card"><img src="Untitled24_20251023210831.png"></div>
-<div class="card"><img src="Untitled22_20251022180537.png"></div>
-<div class="card"><img src="Untitled24_20251223202620.png"></div></div>
-</section><!-- ================= CONTACT ================= --><section id="contact" class="contact">
-<div class="section-title">Contact</div>
-<p>Add your social links here.</p><div class="hero-btns">
-<a class="btn primary" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">YouTube</a>
-<a class="btn" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">Instagram</a>
-</div><div class="footer">
+</section><!-- LOGO SECTION (ONLY LOGOS) --><section id="logo">
+<h2>Logo</h2>
+<div class="grid">
+<div class="card"><img src="Untitled54_20260121112937.png"></div>
+<div class="card"><img src="Untitled50_20260119143236.png"></div>
+<div class="card"><img src="Untitled29_20260105184524.jpg"></div>
+<div class="card"><img src="Untitled23_20260103225034.jpg"></div>
+<div class="card"><img src="Untitled17_20251019195936.jpg"></div>
+<div class="card"><img src="IMG_20251116_173026.png"></div>
+</div>
+</section><!-- THUMBNAIL SECTION (ONLY THUMBNAILS) --><section id="thumb">
+<h2>Thumbnail</h2>
+<div class="grid">
+<div class="card"><img src="Untitled47_20260220185923.png"></div>
+<div class="card"><img src="13447-01.jpg"></div>
+<div class="card"><img src="13495-01.jpg"></div>
+<div class="card"><img src="Untitled1.jpg"></div>
+</div>
+</section><section id="contact" class="contact">
+<h2>Contact</h2>
+<p style="opacity:.7;margin-bottom:18px">Add your social links here.</p>
+<div class="heroBtns">
+<a class="btnMain" href="https://youtube.com/@extronxd?si=nHC8oDvcUunpTmlb" target="_blank">YouTube</a>
+<a class="btnOutline" href="https://www.instagram.com/extronxd01?igsh=MXA0Zmp1OW1xY2MzZg==" target="_blank">Instagram</a>
+</div>
+</section><footer>
 © 2026 Extrond — Aqua Mythic Core
-</div>
-</section></body>
+</footer></body>
 </html>
