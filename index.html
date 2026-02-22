@@ -1,87 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EXTROND</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extrond</title>
 
-<!-- GOOGLE FONT (PRO LOOK) -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
-font-family:'Orbitron',sans-serif;
-background:linear-gradient(180deg,#022a2a,#011c1c);
+font-family:'Inter',sans-serif;
+background:linear-gradient(160deg,#021f1e,#053b37);
 color:#cffffa;
 }
 
+/* ===== HEADER ===== */
+
+.header{
+position:sticky;
+top:0;
+background:rgba(3,40,37,0.8);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 18px;
+border-bottom:1px solid rgba(0,255,220,0.15);
+z-index:100;
+}
+
+.logoTitle{
+font-family:'Orbitron',sans-serif;
+letter-spacing:3px;
+font-size:18px;
+}
+
+.nav{display:flex;gap:10px;}
+
+.nav a{
+text-decoration:none;
+color:#8ffff3;
+border:1px solid rgba(0,255,220,0.3);
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+}
+
 /* ===== HERO ===== */
+
 .hero{
 text-align:center;
-padding:60px 20px 40px;
-max-width:900px;
+max-width:850px;
 margin:auto;
+padding:120px 20px 90px;
 }
 
 .hero h1{
-font-size:38px;
-margin:0 0 10px;
-letter-spacing:3px;
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+margin-bottom:18px;
 }
 
 .hero p{
-color:#9de3dc;
-margin-bottom:25px;
+opacity:0.85;
+line-height:1.6;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-margin:6px;
-padding:12px 26px;
+margin:8px;
+padding:14px 28px;
 border-radius:30px;
-background:linear-gradient(90deg,#7fffd4,#4db8ff);
-color:#001;
+background:linear-gradient(90deg,#7fffe6,#49aaff);
+color:#022;
 text-decoration:none;
-font-size:14px;
+font-weight:500;
+}
+
+.btn.outline{
+background:transparent;
+border:1px solid #7fffe6;
+color:#7fffe6;
 }
 
 /* ===== SECTIONS ===== */
+
 .section{
 max-width:1100px;
-margin:auto;
-padding:30px 18px;
+margin:110px auto;
+padding:0 20px;
 }
 
 .section h2{
-margin-bottom:20px;
-font-size:22px;
-color:#b7fff7;
+font-family:'Orbitron',sans-serif;
+margin-bottom:30px;
+font-size:24px;
 }
 
-/* ===== GRID ===== */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
 }
 
 .card{
-background:#012;
+background:#042c2a;
 border-radius:18px;
 padding:10px;
-border:1px solid #044;
+box-shadow:0 0 0 1px rgba(0,255,220,0.15);
 }
 
 .card img{
 width:100%;
+border-radius:14px;
 display:block;
-border-radius:12px;
+}
+
+/* ===== EXTRA LAST SECTION ===== */
+
+.aboutBox{
+background:#042c2a;
+border-radius:20px;
+padding:40px 30px;
+text-align:center;
+line-height:1.7;
+box-shadow:0 0 0 1px rgba(0,255,220,0.15);
+}
+
+.aboutBox h3{
+font-family:'Orbitron',sans-serif;
+margin-bottom:15px;
+font-size:22px;
 }
 
 /* ===== CONTACT ===== */
-.contact{
+
+.contact{text-align:center;padding-bottom:80px;}
+
+footer{
 text-align:center;
-padding:40px 20px 60px;
+opacity:0.6;
+font-size:13px;
+margin-top:40px;
 }
 
 </style>
@@ -89,54 +152,75 @@ padding:40px 20px 60px;
 
 <body>
 
-<!-- ===== HERO ===== -->
+<!-- HEADER -->
+<div class="header">
+<div class="logoTitle">EXTROND</div>
+<div class="nav">
+<a href="#logo">Logo</a>
+<a href="#thumb">Thumbnail</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
 <div class="hero">
 <h1>EXTROND</h1>
 <p>Professional Minecraft renders, thumbnails and creator visuals.</p>
-
-<a class="btn" href="#">Visit YouTube</a>
-<a class="btn" href="#">View Instagram</a>
+<a class="btn">Visit YouTube</a>
+<a class="btn outline">View Instagram</a>
 </div>
 
-
-<!-- ===== LOGO SECTION (ONLY LOGOS HERE) ===== -->
-<div class="section">
+<!-- LOGO -->
+<div class="section" id="logo">
 <h2>Logo</h2>
 <div class="grid">
 
-<div class="card"><img src="Untitled30_20260119143236.png"></div>
-<div class="card"><img src="Untitled34_20260121112937.png"></div>
-<div class="card"><img src="Untitled29_20260105184524.jpg"></div>
-<div class="card"><img src="Untitled17.jpg"></div>
 <div class="card"><img src="Untitled23_20260103225034.jpg"></div>
-<div class="card"><img src="Untitled43_1.png"></div>
+<div class="card"><img src="Untitled17.jpg"></div>
+<div class="card"><img src="13447-01.jpg"></div>
+<div class="card"><img src="13495-01.jpg"></div>
+<div class="card"><img src="IMG_20251116_173026.png"></div>
+<div class="card"><img src="Untitled84.png"></div>
 
 </div>
 </div>
 
-
-<!-- ===== THUMBNAIL SECTION (ONLY THUMBNAILS HERE) ===== -->
-<div class="section">
+<!-- THUMBNAIL -->
+<div class="section" id="thumb">
 <h2>Thumbnail</h2>
 <div class="grid">
 
-<div class="card"><img src="Untitled14_20251124102514.png"></div>
-<div class="card"><img src="Untitled39_20260125195027.png"></div>
-<div class="card"><img src="Untitled84.png"></div>
-<div class="card"><img src="Untitled24_20251023210831.png"></div>
+<div class="card"><img src="Untitled43_1.png"></div>
+<div class="card"><img src="Untitled24_20251223202620.png"></div>
 <div class="card"><img src="Untitled22_20251022180537.png"></div>
+<div class="card"><img src="Untitled24_20251023210831.png"></div>
+<div class="card"><img src="12496-01.jpg"></div>
 <div class="card"><img src="12943-01.jpg"></div>
-<div class="card"><img src="13447-01.jpg"></div>
 
 </div>
 </div>
 
+<!-- EXTRA LAST SECTION (NEW) -->
+<div class="section">
+<div class="aboutBox">
+<h3>About Extrond</h3>
+<p>
+Extrond is a clean aqua themed creator portfolio focused on Minecraft
+renders, cinematic thumbnails and visual design. Built with balanced
+spacing and a smooth modern layout for both mobile and desktop.
+</p>
+</div>
+</div>
 
-<!-- ===== CONTACT ===== -->
-<div class="contact">
+<!-- CONTACT -->
+<div class="section contact" id="contact">
 <h2>Contact</h2>
-<a class="btn" href="#">YouTube</a>
-<a class="btn" href="#">Instagram</a>
+<a class="btn">YouTube</a>
+<a class="btn outline">Instagram</a>
+
+<footer>
+© 2026 Extrond — Aqua Mythic Core
+</footer>
 </div>
 
 </body>
