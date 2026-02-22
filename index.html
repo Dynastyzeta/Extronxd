@@ -4,158 +4,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EXTROND</title>
 
+<!-- GOOGLE FONT (PRO LOOK) -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 body{
 margin:0;
-font-family:sans-serif;
-background:linear-gradient(180deg,#012b2a,#021e1f);
-color:#bffff6;
-}
-
-/* ===== SMALL TOP BAR ===== */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 18px;
-border-bottom:1px solid #0a4d4d;
-}
-
-nav h1{
-font-size:18px;
-letter-spacing:3px;
-margin:0;
-}
-
-nav div{
-display:flex;
-gap:8px;
-}
-
-nav a{
-padding:6px 14px;
-border:1px solid #0aa;
-border-radius:20px;
-text-decoration:none;
-color:#aef;
-font-size:13px;
+font-family:'Orbitron',sans-serif;
+background:linear-gradient(180deg,#022a2a,#011c1c);
+color:#cffffa;
 }
 
 /* ===== HERO ===== */
 .hero{
 text-align:center;
-padding:50px 18px;
+padding:60px 20px 40px;
+max-width:900px;
+margin:auto;
 }
 
-.hero h2{
-font-size:42px;
-margin:10px 0;
+.hero h1{
+font-size:38px;
+margin:0 0 10px;
+letter-spacing:3px;
+}
+
+.hero p{
+color:#9de3dc;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-margin:8px;
-padding:12px 24px;
+margin:6px;
+padding:12px 26px;
 border-radius:30px;
-background:linear-gradient(90deg,#79ffd5,#4db8ff);
-color:black;
+background:linear-gradient(90deg,#7fffd4,#4db8ff);
+color:#001;
 text-decoration:none;
+font-size:14px;
 }
 
-/* ===== SECTION ===== */
+/* ===== SECTIONS ===== */
 .section{
-padding:30px 18px;
-max-width:1000px;
+max-width:1100px;
 margin:auto;
+padding:30px 18px;
 }
 
-.section h3{
-margin-bottom:18px;
+.section h2{
+margin-bottom:20px;
+font-size:22px;
+color:#b7fff7;
 }
 
 /* ===== GRID ===== */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:18px;
 }
 
 .card{
-background:#022;
-padding:10px;
+background:#012;
 border-radius:18px;
+padding:10px;
 border:1px solid #044;
 }
 
 .card img{
 width:100%;
-border-radius:12px;
 display:block;
+border-radius:12px;
 }
 
 /* ===== CONTACT ===== */
 .contact{
 text-align:center;
-padding:40px 20px;
+padding:40px 20px 60px;
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- ===== NAV ===== -->
-<nav>
-<h1>EXTROND</h1>
-<div>
-<a href="#logo">Logo</a>
-<a href="#thumb">Thumbnail</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
 <!-- ===== HERO ===== -->
 <div class="hero">
-<h2>EXTROND</h2>
+<h1>EXTROND</h1>
 <p>Professional Minecraft renders, thumbnails and creator visuals.</p>
+
 <a class="btn" href="#">Visit YouTube</a>
 <a class="btn" href="#">View Instagram</a>
 </div>
 
-<!-- ===== LOGO SECTION ===== -->
-<div id="logo" class="section">
-<h3>Logo</h3>
+
+<!-- ===== LOGO SECTION (ONLY LOGOS HERE) ===== -->
+<div class="section">
+<h2>Logo</h2>
 <div class="grid">
 
-<!-- PUT ONLY LOGO IMAGES HERE -->
-<div class="card"><img src="Untitled34_20260121112937.png"></div>
 <div class="card"><img src="Untitled30_20260119143236.png"></div>
+<div class="card"><img src="Untitled34_20260121112937.png"></div>
 <div class="card"><img src="Untitled29_20260105184524.jpg"></div>
 <div class="card"><img src="Untitled17.jpg"></div>
 <div class="card"><img src="Untitled23_20260103225034.jpg"></div>
+<div class="card"><img src="Untitled43_1.png"></div>
 
 </div>
 </div>
 
-<!-- ===== THUMBNAIL SECTION ===== -->
-<div id="thumb" class="section">
-<h3>Thumbnail</h3>
+
+<!-- ===== THUMBNAIL SECTION (ONLY THUMBNAILS HERE) ===== -->
+<div class="section">
+<h2>Thumbnail</h2>
 <div class="grid">
 
-<!-- PUT ONLY THUMBNAILS HERE -->
-<div class="card"><img src="Untitled43_1.png"></div>
 <div class="card"><img src="Untitled14_20251124102514.png"></div>
 <div class="card"><img src="Untitled39_20260125195027.png"></div>
 <div class="card"><img src="Untitled84.png"></div>
 <div class="card"><img src="Untitled24_20251023210831.png"></div>
 <div class="card"><img src="Untitled22_20251022180537.png"></div>
 <div class="card"><img src="12943-01.jpg"></div>
+<div class="card"><img src="13447-01.jpg"></div>
 
 </div>
 </div>
+
 
 <!-- ===== CONTACT ===== -->
-<div id="contact" class="contact">
-<h3>Contact</h3>
+<div class="contact">
+<h2>Contact</h2>
 <a class="btn" href="#">YouTube</a>
 <a class="btn" href="#">Instagram</a>
 </div>
