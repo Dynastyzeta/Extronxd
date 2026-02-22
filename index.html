@@ -16,25 +16,34 @@ background:linear-gradient(160deg,#021f1e,#053b37);
 color:#cffffa;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO CLEAN PRO ===== */
 
 .hero{
-text-align:center;
-max-width:850px;
-margin:auto;
-padding:120px 20px 90px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  padding:140px 20px;   /* SAME TOP + BOTTOM SPACE */
 }
 
 .hero h1{
-font-family:'Orbitron',sans-serif;
-font-size:48px;
-margin-bottom:18px;
+  font-family:'Orbitron',sans-serif;
+  font-size:48px;
+  letter-spacing:3px;
+  margin-bottom:18px;
 }
 
 .hero p{
-opacity:0.85;
-line-height:1.6;
-margin-bottom:30px;
+  opacity:.85;
+  line-height:1.6;
+  margin-bottom:32px;
+  font-size:16px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
 }
 
 .btn{
@@ -122,10 +131,18 @@ margin-top:40px;
 
 <!-- HERO -->
 <div class="hero">
-<h1>EXTROND</h1>
-<p>Professional Minecraft renders, thumbnails and creator visuals.</p>
-<a class="btn">Visit YouTube</a>
-<a class="btn outline">View Instagram</a>
+
+  <h1>EXTROND</h1>
+
+  <p>
+    Professional Minecraft renders, thumbnails and creator visuals.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#" class="btn">Visit YouTube</a>
+    <a href="#" class="btn outline">View Instagram</a>
+  </div>
+
 </div>
 
 <!-- LOGO -->
